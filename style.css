@@ -266,3 +266,7 @@ body {
       0% { opacity: 0; transform: scale(0.5); } /* Start with opacity 0 and scale down */
       100% { opacity: 1; transform: scale(1); } /* End with opacity 1 and original scale */
   }
+
+  @media only screen (max-device-width : 768px) {
+      html,body { display: none; } 
+  }
