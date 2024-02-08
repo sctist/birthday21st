@@ -15,7 +15,7 @@
 </head>
 
 <body style="background-image:url('./images/background.jpg'); background-repeat: no-repeat; overflow-x: hidden;">
-  <audio src="./A Thousand Years.mp3" autoplay="true"></audio>
+  <!-- <audio autoplay="autoplay" src="./A Thousand Years.mp3"></audio> -->
   <div class="body">
     <div class="button">
       <button class="btn btn-primary" style="width: 90px; height: 50px; box-shadow: 0px 1px 1px white;" onclick="play()">
@@ -44,7 +44,7 @@
             I intentionally said it late,
             So that others
             could wish you first"
-            
+            <br>
             I am aware that I am nobody,
             Just a knot in your story.
           </p>
@@ -54,6 +54,16 @@
       </div>
     </div>
   </div>
+  <script>
+    $(document).ready(function(){
+      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+          $('.body').css('display','none');
+          $('body').append('<p style="color: white; margin: 6rem;">Open in Desktop</p>');
+      }
+      $('.birthdayCard').css('display', 'none');
+      $('.canvas').css('display', 'none');
+    });
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="index.js"></script>
 </body>
